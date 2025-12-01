@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack Up!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+      <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="../img/anchoYlargo.png" alt="Logo de la empresa"
+          /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li>
+            <!-- Agrego el link al carrito -->
+            <a href="./carrito.html" class="carrito-icono">
+              🛒 <span id="contador-carrito">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
+
+    <main>
+        <section class="seccion-contacto">
+        <h1 class="titulo-contacto">Dejanos tu consulta</h1>
+        <form 
+        class="form" 
+        action=https://formspree.io/f/xwpnaped 
+        method="POST">
+        
+        
+        <div class="campo-form">
+            <label for="email"> Correo *</label>
+    
+            <input id="email" type="email" name="email" />
+        </div>
+
+        <div class="campo-form">
+          <label class="fs-label" for="name">Nombre completo *</label>
+          <input
+            class="campo-form"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Escriba su nombre completo"
+            required
+            autocomplete="name"
+          />
+        </div>
+
+
+        <div class="campo-form">
+          <label class="campo-form" for="phone">Teléfono</label>
+          <input
+            class="fs-input"
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Ej: +54 9 11 xxxxxxx *"
+            autocomplete="tel"
+          />
+        </div>
+
+
+
+        <div class="campo-form">
+            <label for="mensaje"> Mensaje:</label>
+            <textarea id="mensaje" name="message"></textarea>
+        </div>
+
+        <!-- Asunto del mail que te llega -->
+            <input type="hidden" name="subject" value="Contacto desde el sitio" />
+
+        <!-- your other form fields go here -->
+        <button type="submit">Enviar</button>
+      <p class="campo-form">* Campos obligatorios</p> 
+      </form>
+        </section> 
+
+    
+    </main>
+    <footer>
+      <div class="footer-container">
+ 
+        <div class="footer-logo">
+          <img src="../img/estrella.png" alt="Stack UP!" />
+          <h3>Stack Up!</h3>
+        </div>
+
+        
+        <div class="footer-columna footer-links">
+          <h4>Contactanos</h4>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./contacto.html">Contactenos</a></li>
+            <li><a href="./carrito.html">Carrito</a></li>
+          </ul>
+        </div>
+
+        
+        <div class="footer-columna footer-contact">
+          <h4>Dirección</h4>
+          <p>Congreso 1590 5B</p>
+          <p>CABA, Argentina</p>
+          <p>Teléfono: +54 9 1126677719</p>
+          <p>Mail: franco_brunetti@hotmail.com</p>
+        </div>
+
+        
+        <div class="footer-columna footer-social">
+          <h4>Síguenos en nuestras redes</h4>
+          <div class="social-icons">
+            
+            
+              <a href="https://wa.me/5491126677719"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  background:#25D366;
+                  color:white;
+                  padding:15px;
+                  border-radius:50%;
+                  font-size:28px;
+                  display:inline-flex;
+                  justify-content:center;
+                  align-items:center;
+                  text-decoration:none;
+                ">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+
+
+             <a href="https://www.instagram.com/franco_brunetti/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  background:#E4405F;
+                  color:white;
+                  padding:15px;
+                  border-radius:50%;
+                  font-size:28px;
+                  display:inline-flex;
+                  justify-content:center;
+                  align-items:center;
+                  text-decoration:none;
+                ">
+                <i class="fab fa-instagram"></i>
+              </a>
+
+              <a href="https://www.facebook.com/franco.brunetti.775/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  background:#1877F2;
+                  color:white;
+                  padding:15px;
+                  border-radius:50%;
+                  font-size:28px;
+                  display:inline-flex;
+                  justify-content:center;
+                  align-items:center;
+                  text-decoration:none;
+                ">
+                <i class="fab fa-facebook"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/franco-brunetti-8a2410364/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  background:#0A66C2;
+                  color:white;
+                  padding:15px;
+                  border-radius:50%;
+                  font-size:28px;
+                  display:inline-flex;
+                  justify-content:center;
+                  align-items:center;
+                  text-decoration:none;
+                ">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="footer-linea">
+        <p>Franco Brunetti</p>
+        <p>Proyecto Final Talento Tech</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+// Rutas absolutas ya que ahora se usaran desde diferentes archivos HTML
+export const productos = [
+    {id:"1", nombre:"HTML", img:"/img/html final.png",precio:10000 },
+    {id:"2", nombre:"CSS", img:"/img/CSS final.png",precio:12000 },
+    {id:"3", nombre:"JS", img:"/img/JS final.png",precio:11500 },
+    {id:"4", nombre:"PHP", img:"/img/php final.png",precio:14000 },
+    {id:"5", nombre:"Node JS", img:"/img/node.png",precio:32000 },
+    {id:"6", nombre:"Python", img:"/img/Python1.png",precio:9000 },
+    {id:"7", nombre:"React", img:"/img/React-final png.png",precio:10500 },
+    {id:"8", nombre:"Java", img:"/img/java final.png",precio:21000 },
+
+];
+    
+

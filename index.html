@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack Up!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./img/anchoYlargo.png" alt="Logo de la empresa"
+          /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="./page/contacto.html">Contacto</a></li>
+          <li>
+              <!-- Agrego el link al carrito -->
+              <a href="./page/carrito.html" class="carrito-icono">
+                🛒 <span id="contador-carrito">0</span>
+              </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="main-home">
+        <div class="container home-content">
+          <div class="text-content">
+            <h1>¡Bienvenidos a <br />Desarrollo Web Full Stack!</h1>
+            <p>
+              Si estás leyendo este artículo, probablemente ya sabrás que el desarrollo de software Full-Stack
+              ha sido y va a ser una de las profesiones mejor pagadas en los próximos años. Y si no lo sabías,
+              bueno pues, ahora, ya lo sabes.
+            
+            </p>
+            
+            <a href="#productos"  class="btn-primary">Ir a CURSOS</a>
+
+          </div>
+            <div class="image">
+              <img src="./img/estrella.png" alt="Imagen" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products-home"  id="productos">
+        <h2>Nuestros Cursos</h2>
+        <p>
+          Es probable que quieras darle un giro a tu carrera profesional, estés buscando un nuevo desafío laboral
+          o que estés empezando a construir una. Sea cual fuese tu situación, es imprescindible que conozcas todo
+          lo que necesitas aprender para ser un desarrollador Full-Stack.
+        </p>
+
+        
+        <div id="contenedor-tarjetas" class="contenedor-tarjetas" >
+
+
+        
+        </div>
+      </section>  
+    
+    </main>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="./img/estrella.png" alt="Stack UP!" />
+            <h3>Stack Up!</h3>
+          </div>
+
+        
+          <div class="footer-columna footer-links">
+            <h4>Contactanos</h4>
+            <ul>
+              <li><a href="./index.html">Inicio</a></li>
+              <li><a href="./page/contacto.html">Contactenos</a></li>
+              <li><a href="./page/carrito.html">Carrito</a></li>
+            </ul>
+          </div>
+
+        
+          <div class="footer-columna footer-contact">
+            <h4>Dirección</h4>
+            <p>Congreso 1590 5B</p>
+            <p>CABA, Argentina</p>
+            <p>Teléfono: +54 9 1126677719</p>
+            <p>Mail: franco_brunetti@hotmail.com</p>
+          </div>
+
+          
+
+
+          <div class="footer-columna footer-social">
+              <h4>Síguenos en nuestras redes</h4>
+            <div class="social-icons">
+              
+              <a href="https://wa.me/5491126677719"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  background:#25D366;
+                  color:white;
+                  padding:15px;
+                  border-radius:50%;
+                  font-size:28px;
+                  display:inline-flex;
+                  justify-content:center;
+                  align-items:center;
+                  text-decoration:none;
+                ">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+
+
+             <a href="https://www.instagram.com/franco_brunetti/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  background:#E4405F;
+                  color:white;
+                  padding:15px;
+                  border-radius:50%;
+                  font-size:28px;
+                  display:inline-flex;
+                  justify-content:center;
+                  align-items:center;
+                  text-decoration:none;
+                ">
+                <i class="fab fa-instagram"></i>
+              </a>
+
+              <a href="https://www.facebook.com/franco.brunetti.775/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  background:#1877F2;
+                  color:white;
+                  padding:15px;
+                  border-radius:50%;
+                  font-size:28px;
+                  display:inline-flex;
+                  justify-content:center;
+                  align-items:center;
+                  text-decoration:none;
+                ">
+                <i class="fab fa-facebook"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/franco-brunetti-8a2410364/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  background:#0A66C2;
+                  color:white;
+                  padding:15px;
+                  border-radius:50%;
+                  font-size:28px;
+                  display:inline-flex;
+                  justify-content:center;
+                  align-items:center;
+                  text-decoration:none;
+                ">
+                <i class="fab fa-linkedin"></i>
+              </a>
+
+            
+            
+            </div>
+          </div>
+        </div>
+
+      
+          <div class="footer-linea">
+            <p>Franco Brunetti</p>
+            <p>Proyecto Final Talento Tech</p>
+          </div>
+      </footer>
+      <script src="./js/index.js" type="module" ></script> 
+  </body>
+</html>
