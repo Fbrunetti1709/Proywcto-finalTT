@@ -1,54 +1,74 @@
 // muestra todos los productos
 // permite agregar productos al carrito
 // actualiza el contador del carrito en la interfaz
-import { productos } from "./productos.js";
+
+//import {productos } from "./productos.js"; ahora lo importo desde productos.json
 import { agregarAlCarrito } from "./funcionesCarrito.js";
 import { obtenerCarrito } from "./storage.js";
 import { actualizarContador } from "./ui.js";
 
-//El evento "DOMContentLoaded" sirve para que no intentemos acceder a un nodo HTML con el
-//  codigo js antes de que el navegador lo cree:
-//Por ejemplo: que no lea un getElementById cuando aun no existe ese id.
+// Función para mostrar los productos en la página
+// y agregar funcionalidad para agregar al carrito
+// al hacer clic en el botón correspondiente
+// al cargar el DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
-  //Accedemos al contenedor donde queremos generar los articles
   const contenedor = document.getElementById("contenedor-tarjetas");
-
-  //Pedimos la info de productos en carrito para mostrar el numero si hay productos
+  // Obtener el carrito desde el almacenamiento
   const carrito = obtenerCarrito();
   actualizarContador(carrito);
 
-  productos.forEach((producto) => {
-    // creamos los articles y sus contenidos
-    const tarjeta = document.createElement("article");
-    tarjeta.classList.add("tarjeta-producto");
+  //PEDIR LOS PRODUCTOS AL ARCHIVO JSON CON FETCH
 
-    const img = document.createElement("img");
-    img.src = `./${producto.img}`;
-    img.alt = producto.nombre;
+  fetch("./data/productos.json")
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`Error al cargar los productos:" ${res.status}`);
+      }
 
-    const titulo = document.createElement("h3");
-    titulo.textContent = producto.nombre;
+      return res.json();
+    })
 
-    const precio = document.createElement("p");
-    precio.textContent = `$${producto.precio}`;
+    .then((data) => {
+      data.forEach((producto) => {
+        // Crear el elemento del producto
+        const tarjeta = document.createElement("article");
+        // Agregar clase a la tarjeta del producto
+        tarjeta.classList.add("tarjeta-producto");
 
-    const boton = document.createElement("button");
-    boton.classList.add("btn");
-    boton.textContent = "Agregar al carrito";
+        //crea la imagen del producto
+        const img = document.createElement("img");
+        img.src = `./${producto.img}`;
+        img.alt = producto.nombre;
 
-    boton.addEventListener("click", () => {
-      agregarAlCarrito(producto);
+        //crea el titulo del producto
+        const titulo = document.createElement("h3");
+        titulo.textContent = producto.nombre;
+
+        //crea el precio del producto
+        const precio = document.createElement("p");
+        precio.textContent = `$${producto.precio}`;
+
+        //crea el boton de agregar al carrito
+        const boton = document.createElement("button");
+        boton.classList.add("btn");
+        boton.textContent = "Agregar al carrito";
+
+        // Agregar evento al botón para agregar el producto al carrito
+        boton.addEventListener("click", () => {
+          agregarAlCarrito(producto);
+        });
+
+        // Agregar los elementos a la tarjeta del producto. Arma la estructura
+        tarjeta.appendChild(img);
+        tarjeta.appendChild(titulo);
+        tarjeta.appendChild(precio);
+        tarjeta.appendChild(boton);
+
+        contenedor.appendChild(tarjeta);
+      });
+    })
+
+    .catch((err) => {
+      console.log(err);
     });
-
-    // Armar la estructura
-    
-    tarjeta.appendChild(img);
-    tarjeta.appendChild(titulo);
-    tarjeta.appendChild(precio);
-    tarjeta.appendChild(boton);
-    // Agregar la tarjeta al contenedor principal 
-    contenedor.appendChild(tarjeta);
-  });
 });
-
-
